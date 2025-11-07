@@ -76,12 +76,6 @@ MERN Stack with advanced authentication :
 
 This repository is scanned with snyk and code scanning from github for vulnerabilities. Do not use this code blindly, audit it first.
 
-## :information_source: How to ?
-
-- Use emails for authentication instead of usernames: <https://github.com/flaviuse/mern-authentication/issues/7>
-
-- I added a dependency but my docker container does not found it: <https://medium.com/@semur.nabiev/how-to-make-docker-compose-volumes-ignore-the-node-modules-directory-99f9ec224561> (either install the dependency in the container with the cli or reset the volume).
-
 ## API
 
 ### POST /user/register
