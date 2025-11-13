@@ -45,11 +45,11 @@ const userSchema = new Schema<UserDocument>({
     required: true,
     default: false,
   },
-  // isAdmin: {
-  //   type: Boolean,
-  //   default: false,
-  //   required: true,
-  // },
+  isAdmin: {
+    type: Boolean,
+    default: false,
+    required: true,
+  },
   expires: { type: Date, default: dayjs().toDate(), expires: 43200 },
 });
 
