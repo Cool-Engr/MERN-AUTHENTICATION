@@ -57,11 +57,11 @@ export const postLoginForgot = async (req: Request, res: Response) => {
     const resetToken = TokenService.createToken();
     const tokenExpiryDate = dayjs().add(12, "hours").toDate();
 
-    TokenService.setUserId(resetToken, user.id);
-    UserService.setResetPasswordToken(user, resetToken.token, tokenExpiryDate);
+    // TokenService.setUserId(resetToken, user.id);
+    // UserService.setResetPasswordToken(user, resetToken.token, tokenExpiryDate);
 
-    await UserService.saveUser(user);
-    await TokenService.saveToken(resetToken);
+    // await UserService.saveUser(user);
+    // await TokenService.saveToken(resetToken);
 
     try {
       const email = EmailService.createResetPasswordEmail(user.email, resetToken.token);
