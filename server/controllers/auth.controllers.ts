@@ -30,10 +30,10 @@ export const postLogin = (req: Request, res: Response, next: NextFunction) => {
     if (!user) {
       return res.status(400).send({ message: "Invalid email or password." });
     }
-    // if (!user.isVerified)
-    //   return res.status(401).send({
-    //     message: "Your account has not been verified. Please activate your account.",
-    //   });
+    if (!user.isVerified)
+      return res.status(401).send({
+        message: "Your account has not been verified. Please activate your account.",
+      });
 
     req.login(user, (err: Error) => {
       if (err) {
