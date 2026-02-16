@@ -35,14 +35,14 @@ export const attemptResetPassword = (password: string, token: string, navigate: 
       navigate(`/login/reset/${token}`, { replace: true });
     });
 
-export const attemptLogout = (navigate: NavigateFunction) => (dispatch: Dispatch) =>
-  postLogout()
-    .then(() => {
-      dispatch(logout());
-    })
-    .finally(() => {
-      navigate("/login", { replace: true });
-    });
+// export const attemptLogout = (navigate: NavigateFunction) => (dispatch: Dispatch) =>
+//   postLogout()
+//     .then(() => {
+//       dispatch(logout());
+//     })
+//     .finally(() => {
+//       navigate("/login", { replace: true });
+//     });
 
 export const attemptRegister = (newUser: User) => () => postUser(newUser);
 
