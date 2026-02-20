@@ -21,10 +21,10 @@ export const attemptLogin =
       navigate("/home", { replace: true });
     });
 
-// export const attemptSendResetPasswordLink = (email: string, navigate: NavigateFunction) =>
-//   sendResetPasswordLink(email).then(() => {
-//     navigate("/login/forgot", { replace: true });
-//   });
+export const attemptSendResetPasswordLink = (email: string, navigate: NavigateFunction) =>
+  sendResetPasswordLink(email).then(() => {
+    navigate("/login/forgot", { replace: true });
+  });
 
 export const attemptResetPassword = (password: string, token: string, navigate: NavigateFunction) =>
   resetPassword(password, token)
