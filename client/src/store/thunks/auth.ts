@@ -58,8 +58,8 @@ export const attemptResendConfirmation =
       navigate("/register", { replace: true });
     });
 
-// export const attemptResetRegister =
-//   (email: string, navigate: NavigateFunction) => (dispatch: Dispatch) =>
-//     resetRegister(email).catch(() => {
-//       navigate("/register", { replace: true });
-//     });
+export const attemptResetRegister =
+  (email: string, navigate: NavigateFunction) => (dispatch: Dispatch) =>
+    resetRegister(email).catch(() => {
+      navigate("/register", { replace: true });
+    });
