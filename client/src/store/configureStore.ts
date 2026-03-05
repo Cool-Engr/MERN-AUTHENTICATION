@@ -13,12 +13,12 @@ declare global {
 
 type AppState = { user: UserState };
 
-const initialState: AppState = {
-  user: {
-    isAuth: false,
-    user: null,
-  },
-};
+// const initialState: AppState = {
+//   user: {
+//     isAuth: false,
+//     user: null,
+//   },
+// };
 
 export default function configureStore(
   state: AppState = initialState
